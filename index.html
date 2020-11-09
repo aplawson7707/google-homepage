@@ -1,111 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Google</title>
-    <style>
-        .tlnavbar {
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-        .tlnavbar a {
-            float: left;
-            display: block;
-            text-align: left;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        .trnavbar {
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-        .trnavbar a {
-            float: right;
-            display: block;
-            text-align: left;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        .logo {
-            margin-top: 14%;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .search_buttons {
-            text-align: center;
-        }
-        .blnavbar {
-            overflow: hidden;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: lightgrey;
-        }
-        .blnavbar a {
-            float: left;
-            display: block;
-            text-align: left;
-            padding: 15px 15px;
-            text-decoration: none;
-        }
-        .brnavbar {
-            overflow: hidden;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .brnavbar a {
-            float: right;
-            display: block;
-            text-align: left;
-            padding: 15px 15px;
-            text-decoration: none;
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Google</title>
+        <style>
+            body {
+                font-family: Helvetica, Arial;
+            }
+            #header{
+                font-size: 13px;
+                color: black;
+            }
+            #header-links {
+                margin-top: 10px;
+            }
+            #footer{
+                font-size: 15px;
+                color: #70757a;
+                line-height: 1px;
+                border-top: 1px solid;
+            }
+            .tlnavbar {
+                overflow: hidden;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            .tlnavbar a {
+                float: left;
+                display: block;
+                text-align: left;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .trnavbar {
+                overflow: hidden;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            .trnavbar a {
+                float: right;
+                display: block;
+                text-align: left;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .logo {
+                margin-top: 14%;
+                padding: 20px 0;
+                text-align: center;
+            }
+            .search_buttons {
+                margin-top: 40px;
+                text-align: center;
+            }
+            .blnavbar {
+                overflow: hidden;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: #f2f2f2;
+            }
+            .blnavbar a {
+                float: left;
+                display: block;
+                text-align: left;
+                padding: 20px;
+                text-decoration: none;
+            }
+            .brnavbar {
+                overflow: hidden;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+            .brnavbar a {
+                float: right;
+                display: block;
+                text-align: left;
+                padding: 20px 20px;
+                text-decoration: none;
+            }
+            #signin {
+                border: solid #4285f4;
+                font-weight: bold;
+                background-color: #4a82fa;
+                border-radius: 4px;
+                color: white;
+                display:inline-block;
+                line-height: 28px;
+                padding: 0 15px;
+                border-radius: 2px;
+            }
+            #form-box {
+                display: grid;
+                justify-items: center;
+            }
+            form {
+                display: grid;
+                grid-template-columns: 280px 280px;
+                gap: 30px 10px;
+            }
+            @media (max-width: 1000px) {
+                form {
+                    grid-template-columns: 50% 50%;
+                    width: max-content;
+                    justify-items: auto;
+                }
+            }
+            #search-bar {
+                grid-column: 1/3;
+                border: 1px solid #75757541;
+                height: 45px;
+                border-radius: 30px;
+                box-shadow: none;
+            }
+            #search-bar:hover {
+                box-shadow: 0px 1px 5px 1px #8888883a;
+            }
+            #search-div {
+                display: grid;
+                grid-template-columns: 50px 1fr 40px;
+                height: 100%;
+                align-items: center;
+                justify-items: center;
+            }
+            #search-icon {
+                opacity: 30%
+            }
+            #search-field {
+                grid-column: 2/3;
+                display: block;
+                width: 100%;
+                height: 100%;
+                margin: auto auto auto auto;
+                border: 0px solid;
+                font-size: 15px;
+                color: rgb(53, 53, 53);
+            }
+            #voice-icon {
+                width: 15px;
+            }
+            #google-search {
+                opacity: 50%;
+                border: solid #fafafa;
+                font-size: 14px;
+                border-radius: 4px;
+                color: #70757a;
+                display:inline-block;
+                line-height: 28px;
+                padding: 0 10px;
+                border-radius: 2px;
+                background-color: #fafafa;
+            }
+            #google-search:hover {
+                opacity: 100%;
+            }
+            #lucky-search {
+                opacity: 50%;
+                border: solid #fafafa;
+                font-size: 14px;
+                border-radius: 4px;
+                color: #70757a;
+                display:inline-block;
+                line-height: 28px;
+                padding: 0 10px;
+                border-radius: 2px;
+                background-color: #fafafa;
+            }
+            #lucky-search:hover {
+                opacity: 100%;
+            }
+        </style>
+    </head>
 
-<body>
+    <body>
 
-<div class= "tlnavbar">
-    <a>About</a>
-    <a>Store</a>
-</div>
+    <div class="tlnavbar" id="header">
+        <div id="header-links">
+            <a>About</a>
+            <a>Store</a>
+        </div>
+    </div>
 
-<div class= "trnavbar">
-    <a><button type="button">Sign in</button></a>
-    <a><img src="menu16.png"></a>
-    <a>Images</a>
-    <a>Gmail</a>
-</div>
+    <div class= "trnavbar" id="header">
+        <a><button id="signin" type="button">Sign in</button></a>
+        <div id="header-links">
+            <a><img src="menu16.png"></a>
+            <a>Images</a>
+            <a>Gmail</a>
+        </div>
+    </div>
 
-<div class="logo">
-    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-    <br>
-    <input type="text">
-    <br>
-</div>
+    <div class="logo">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    </div>
 
-<div class="search_buttons">
-    <button type="button">Google Search</button>
-    <button type="button">I'm Feeling Lucky</button>
-</div>
+    <div id="form-box">
+        <form>
+            <div id="search-bar">
+                <div id="search-div">
+                    <div id="search-icon"><img src="search.png"></div>
+                    <input id="search-field" type="search">
+                    <div><img src="speech.png" id="voice-icon"></div>
+                </div>
+            </div>
+        </form>
+    </div>
 
-<div class="blnavbar">
-    <a>Advertising</a>
-    <a>Business</a>
-    <a>How Search Works</a>
-</div>
+    <div class="search_buttons">
+        <button id="google-search" type="button">Google Search</button>
+        <button id="lucky-search" type="button">I'm Feeling Lucky</button>
+    </div>
 
-<div class="brnavbar">
-    <a>Settings</a>
-    <a>Terms</a>
-    <a>Privacy</a>
-</div>
+    <div class="blnavbar" id="footer">
+        <a>Advertising</a>
+        <a>Business</a>
+        <a>How Search Works</a>
+    </div>
 
-</body>
+    <div class="brnavbar" id="footer">
+        <a>Settings</a>
+        <a>Terms</a>
+        <a>Privacy</a>
+    </div>
+
+    </body>
 
 </html>

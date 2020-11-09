@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <title>Google</title>
     <style>
+        .tlnavbar {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .tlnavbar a {
+            float: left;
+            display: block;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .trnavbar {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .trnavbar a {
+            float: right;
+            display: block;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
         .logo {
-            margin-top: 70px;
+            margin-top: 20%;
             padding: 10px 0;
             text-align: center;
         }
@@ -16,6 +42,18 @@
 </head>
 
 <body>
+
+<div class= "tlnavbar">
+    <a>About</a>
+    <a>Store</a>
+</div>
+
+<div class= "trnavbar">
+    <a><button type="button">Sign in</button></a>
+    <a><img src="menu16.png"></a>
+    <a>Images</a>
+    <a>Gmail</a>
+</div>
 
 <div class="logo">
     <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">

@@ -31,12 +31,39 @@
             text-decoration: none;
         }
         .logo {
-            margin-top: 20%;
+            margin-top: 14%;
             padding: 10px 0;
             text-align: center;
         }
         .search_buttons {
             text-align: center;
+        }
+        .blnavbar {
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: lightgrey;
+        }
+        .blnavbar a {
+            float: left;
+            display: block;
+            text-align: left;
+            padding: 15px 15px;
+            text-decoration: none;
+        }
+        .brnavbar {
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .brnavbar a {
+            float: right;
+            display: block;
+            text-align: left;
+            padding: 15px 15px;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -65,6 +92,18 @@
 <div class="search_buttons">
     <button type="button">Google Search</button>
     <button type="button">I'm Feeling Lucky</button>
+</div>
+
+<div class="blnavbar">
+    <a>Advertising</a>
+    <a>Business</a>
+    <a>How Search Works</a>
+</div>
+
+<div class="brnavbar">
+    <a>Settings</a>
+    <a>Terms</a>
+    <a>Privacy</a>
 </div>
 
 </body>
